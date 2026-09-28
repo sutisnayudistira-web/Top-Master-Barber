@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Master Barber — Home Service Bali</title>
+<meta name="description" content="Premium home and hotel barber service in Gianyar, Ubud and Bali. Haircuts, coloring, dreadlocks, cornrows and grooming by Top Master Barber.">
+<style>
+:root{
+  --bg:#0b0b0b; --card:#151515; --gold:#d7ad62; --gold2:#f0d08b;
+  --text:#f5f2ea; --muted:#b7b3aa; --line:#2b2b2b; --green:#25d366;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(11,11,11,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:2px;color:var(--gold);font-size:18px}
+.navlinks{display:flex;gap:25px;font-size:14px;color:#ddd}
+.navlinks a:hover{color:var(--gold)}
+.hero{min-height:92vh;padding:150px 0 80px;display:flex;align-items:center;
+background:radial-gradient(circle at 75% 35%,#332712 0,#17130c 18%,#0b0b0b 48%)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}
+.badge{display:inline-block;border:1px solid #765d31;color:var(--gold2);padding:7px 13px;border-radius:30px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px}
+h1{font-size:clamp(42px,7vw,78px);line-height:1.02;letter-spacing:-2px;margin-bottom:22px}
+.gold{color:var(--gold)}
+.hero p{font-size:19px;color:var(--muted);max-width:650px;margin-bottom:30px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:14px 22px;border-radius:8px;font-weight:700;display:inline-block;border:1px solid var(--gold)}
+.btn-primary{background:var(--gold);color:#111}
+.btn-primary:hover{background:var(--gold2)}
+.btn-outline{color:var(--gold2)}
+.btn-outline:hover{background:#211b10}
+.hero-card{border:1px solid #4c3b20;background:linear-gradient(145deg,#17130c,#0f0f0f);padding:30px;border-radius:18px;box-shadow:0 25px 70px #000}
+.hero-card .scissors{font-size:74px;text-align:center;margin-bottom:10px}
+.hero-card h3{text-align:center;color:var(--gold2);font-size:24px}
+.hero-card p{text-align:center;font-size:14px;margin:10px 0 20px}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.quick div{background:#171717;border:1px solid var(--line);padding:12px;text-align:center;border-radius:10px;font-size:12px;color:#ddd}
+section{padding:85px 0}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:38px;margin-bottom:8px}
+.section-title p{color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:25px}
+.service .icon{font-size:28px;margin-bottom:10px}
+.service h3{color:var(--gold2);margin-bottom:8px}
+.service p{color:var(--muted);font-size:14px}
+.about{background:#101010}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about h2{font-size:42px;margin-bottom:15px}
+.about p{color:var(--muted);margin-bottom:15px}
+.list{display:grid;gap:10px;margin-top:20px}
+.list div:before{content:"✓";color:var(--gold);font-weight:bold;margin-right:10px}
+.booking{background:linear-gradient(135deg,#17130c,#0c0c0c)}
+.booking-box{max-width:800px;margin:auto;background:#141414;border:1px solid #49391f;border-radius:18px;padding:35px}
+form{display:grid;gap:15px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+input,select,textarea{width:100%;background:#0c0c0c;border:1px solid #333;color:#fff;border-radius:8px;padding:14px;font-size:15px}
+textarea{min-height:120px;resize:vertical}
+label{font-size:12px;color:#aaa;margin-bottom:5px;display:block}
+footer{padding:35px 0;border-top:1px solid var(--line);color:#999;font-size:13px}
+.footerin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.float{position:fixed;right:20px;bottom:20px;background:var(--green);color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:20;box-shadow:0 8px 25px #000}
+@media(max-width:800px){
+ .navlinks{display:none}.hero{padding-top:125px}.hero-grid,.about-grid{grid-template-columns:1fr}
+ .services{grid-template-columns:1fr 1fr}.hero-card{order:-1}.row{grid-template-columns:1fr}
+}
+@media(max-width:520px){.services{grid-template-columns:1fr}section{padding:65px 0}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container navin">
+    <div class="logo">TOP MASTER BARBER</div>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#booking">Booking</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">Home & Hotel Service • Bali</span>
+      <h1>Premium Barber<br><span class="gold">At Your Door.</span></h1>
+      <p>Professional barber and salon services brought directly to your home, villa or hotel in Gianyar, Ubud and surrounding Bali.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#booking">BOOK NOW</a>
+        <a class="btn btn-outline" href="https://wa.me/62816965113?text=Hello%20Top%20Master%20Barber,%20I%20would%20like%20to%20book%20a%20home%20service." target="_blank">WHATSAPP</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="scissors">✂️</div>
+      <h3>Master Barber Service</h3>
+      <p>Clean • Professional • Comfortable • On Time</p>
+      <div class="quick">
+        <div>HOME</div><div>HOTEL</div><div>VILLA</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Professional grooming and hair artistry wherever you are.</p>
+    </div>
+    <div class="services">
+      <div class="service"><div class="icon">💈</div><h3>Haircut & Fade</h3><p>Classic, modern, skin fade, taper and precision styling for men and women.</p></div>
+      <div class="service"><div class="icon">🎨</div><h3>Hair Coloring</h3><p>Black coloring, highlights, balayage and creative hair coloring.</p></div>
+      <div class="service"><div class="icon">🧔</div><h3>Beard & Grooming</h3><p>Beard shaping, mustache trimming and detailed finishing.</p></div>
+      <div class="service"><div class="icon">🧵</div><h3>Dreadlocks & Cornrows</h3><p>Custom dreadlocks, hair braids and cornrow styling.</p></div>
+      <div class="service"><div class="icon">✨</div><h3>Hair Extension</h3><p>Professional hair extension service for a customized look.</p></div>
+      <div class="service"><div class="icon">🧖</div><h3>Hair & Beauty Treatment</h3><p>Waxing, creambath, facial care and selected grooming treatments.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div>
+      <span class="badge">About the Barber</span>
+      <h2>Experience You Can Trust.</h2>
+      <p>Top Master Barber brings extensive professional experience from the barbershop directly to your location.</p>
+      <p>Perfect for tourists, villa guests, hotel guests, events, photoshoots and anyone who wants a premium grooming experience without leaving their accommodation.</p>
+      <div class="list">
+        <div>Home, hotel and villa appointments</div>
+        <div>Professional tools and hygienic setup</div>
+        <div>Flexible appointment scheduling</div>
+        <div>Service available around Gianyar & Ubud</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Serving Bali</h3>
+      <p>Gianyar • Ubud • Bali</p>
+      <p style="font-size:32px;color:#f0d08b;font-weight:800">HOME SERVICE</p>
+      <p>Contact us to check availability and travel fee for your location.</p>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="container">
+    <div class="section-title">
+      <h2>Book Your Appointment</h2>
+      <p>Fill in the details and your WhatsApp message will be prepared automatically.</p>
+    </div>
+    <div class="booking-box">
+      <form id="bookingForm">
+        <div class="row">
+          <div><label>Your Name</label><input id="name" required placeholder="Your name"></div>
+          <div><label>Preferred Date</label><input id="date" type="date" required></div>
+        </div>
+        <div class="row">
+          <div><label>Preferred Time</label><input id="time" type="time" required></div>
+          <div><label>Service</label>
+            <select id="service">
+              <option>Haircut / Fade</option>
+              <option>Haircut + Beard</option>
+              <option>Hair Coloring</option>
+              <option>Dreadlocks / Cornrows</option>
+              <option>Hair Extension</option>
+              <option>Other Treatment</option>
+            </select>
+          </div>
+        </div>
+        <div><label>Location</label><input id="location" required placeholder="Hotel / Villa / Home + area"></div>
+        <div><label>Additional Notes</label><textarea id="notes" placeholder="Tell us anything we should know..."></textarea></div>
+        <button class="btn btn-primary" type="submit">SEND BOOKING VIA WHATSAPP</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footerin">
+    <div>© 2026 Top Master Barber — Bali Home Service</div>
+    <div>WhatsApp: +62 816-9651-13</div>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/62816965113?text=Hello%20Top%20Master%20Barber,%20I%20want%20to%20book%20a%20home%20service." target="_blank" aria-label="WhatsApp">◉</a>
+
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const date = document.getElementById('date').value;
+  const time = document.getElementById('time').value;
+  const service = document.getElementById('service').value;
+  const location = document.getElementById('location').value;
+  const notes = document.getElementById('notes').value;
+  const msg = `Hello Top Master Barber!%0A%0AI would like to book a home service.%0A%0AName: ${encodeURIComponent(name)}%0ADate: ${encodeURIComponent(date)}%0ATime: ${encodeURIComponent(time)}%0AService: ${encodeURIComponent(service)}%0ALocation: ${encodeURIComponent(location)}%0ANotes: ${encodeURIComponent(notes)}`;
+  window.open(`https://wa.me/62816965113?text=${msg}`, '_blank');
+});
+</script>
+</body>
+</html>
